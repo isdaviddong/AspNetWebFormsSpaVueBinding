@@ -33,12 +33,12 @@
 
         //清空
         function Clear() {
-            CallPageMethod('GetData', null,
+            //CallPageMethod('GetData', null,
                 //success
-                function (result) {
+                //function (result) {
                     binding_StudentInfo.items = undefined;
-                }
-             );
+                //}
+            // );
         }
 
         //ready
@@ -91,7 +91,7 @@
                                     </td>
                                     <td>
                                         <span>{{item.Memo}}</span>
-                                    </td>
+                                    </td></tr>
                             </tbody>
                         </table>
                     </div>
