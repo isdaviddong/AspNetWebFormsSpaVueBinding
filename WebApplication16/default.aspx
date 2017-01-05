@@ -33,12 +33,7 @@
 
         //清空
         function Clear() {
-            //CallPageMethod('GetData', null,
-                //success
-                //function (result) {
-                    binding_StudentInfo.items = undefined;
-                //}
-            // );
+            binding_StudentInfo.items = undefined;
         }
 
         //ready
