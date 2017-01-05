@@ -7,9 +7,11 @@
     <script src="Scripts/isRockFx.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <script>
+        var vm_StudentInfo;
+        var binding_StudentInfo;
+
         //設定資料繫結
         function SetBinding() {
-            var vm_StudentInfo;
 
             binding_StudentInfo = new Vue(
                         {
@@ -30,7 +32,7 @@
 
         //清空
         function Clear() {
-            binding_StudentInfo.items = undefined
+            binding_StudentInfo.items = undefined;
         }
 
         //ready
@@ -43,7 +45,7 @@
     </script>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <!--<form id="form1" runat="server"> --> 
         <div class="row">
             <div class="col-md-12" style="margin: 10px">
                 <div class="panel panel-primary">
@@ -84,12 +86,15 @@
                                     <td>
                                         <span>{{item.Memo}}</span>
                                     </td>
+                                    </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
-    </form>
+     <!--   </form> -->
 </body>
 </html>
+--------------------------------------------
+如果需要即時取得更多相關訊息，可按這裡加入FB專頁。若這篇文章對您有所幫助，請幫我們分享出去，謝謝您的支持。
