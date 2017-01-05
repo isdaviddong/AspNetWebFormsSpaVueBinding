@@ -10,9 +10,10 @@
     <script src="Scripts/isRockFx.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <script>
+        var vm_StudentInfo;
+        var binding_StudentInfo;
         //設定資料繫結
         function SetBinding() {
-            var vm_StudentInfo;
 
             binding_StudentInfo = new Vue(
                         {
