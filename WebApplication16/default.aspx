@@ -10,15 +10,15 @@
     <script src="Scripts/isRockFx.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <script>
+        var vd_StudentInfo;
         var vm_StudentInfo;
-        var binding_StudentInfo;
         //設定資料繫結
         function SetBinding() {
 
-            binding_StudentInfo = new Vue(
+            vm_StudentInfo = new Vue(
                         {
                             el: '#tableBody',
-                            data: { items: vm_StudentInfo },
+                            data: { items: vd_StudentInfo },
                         });
         }
 
@@ -27,14 +27,14 @@
             CallPageMethod('GetData', null,
                 //success
                 function (result) {
-                    binding_StudentInfo.items = result.Data;
+                    vm_StudentInfo.items = result.Data;
                 }
              );
         }
 
         //清空
         function Clear() {
-            binding_StudentInfo.items = undefined;
+            vm_StudentInfo.items = undefined;
         }
 
         //ready
@@ -52,7 +52,7 @@
             <div class="col-md-12" style="margin: 10px">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        範例 : Vue.js  資料表Binding
+                        範例 : Vue.js  資料表前端Template Rendering (.aspx版)
                     </div>
                     <div class="panel-body">
                         <button type="button" id="ButtonGetData" class="btn btn-primary">Get Data</button>
