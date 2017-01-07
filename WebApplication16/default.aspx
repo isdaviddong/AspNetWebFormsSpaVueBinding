@@ -10,11 +10,11 @@
     <script src="Scripts/isRockFx.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <script>
-        var vd_StudentInfo;
-        var vm_StudentInfo;
+        var vd_StudentInfo;  //view data
+        var vm_StudentInfo; //vue instance
         //設定資料繫結
         function SetBinding() {
-
+            //create vue instance
             vm_StudentInfo = new Vue(
                         {
                             el: '#tableBody',
@@ -39,8 +39,9 @@
 
         //ready
         $(function () {
+            //設定DataBinding
             SetBinding();
-
+            //設定Button Event Hook
             $('#ButtonGetData').click(GetData);
             $('#ButtonClear').click(Clear);
         });
@@ -87,7 +88,8 @@
                                     </td>
                                     <td>
                                         <span>{{item.Memo}}</span>
-                                    </td></tr>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>

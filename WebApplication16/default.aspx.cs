@@ -8,6 +8,7 @@ using isRock.Framework.PageMethods;
 
 namespace WebApplication16
 {
+    //往前端傳遞的資料結構，可以視為View Data
     public class StudentInfo
     {
         public string StudentName { get; set; }
@@ -19,6 +20,7 @@ namespace WebApplication16
 
     public partial class _default : System.Web.UI.Page
     {
+        //可以被前端JavaScript呼叫的PageMethod
         [System.Web.Services.WebMethod(enableSession: true)]
         public static PageMethodDefaultResult<List<StudentInfo>> GetData()
         {
@@ -40,11 +42,11 @@ namespace WebApplication16
                     item.Memo = "太瘦!";
             }
 
-            //回傳
+            //回傳給前端JavaScript
             return new PageMethodDefaultResult<List<StudentInfo>>()
             { isSuccess = true, Data = returnData };
         }
-
+        //由於我們雖然用WebForms，但不搞postback這一套，因此Page_Load暫時沒用
         protected void Page_Load(object sender, EventArgs e)
         {
 
